@@ -10,7 +10,7 @@ public class EnemyPatrolling : MonoBehaviour
     private Transform[] _points;
     private int _currentPoint;
 
-    public bool IsMoveRight => transform.position.x < _points[_currentPoint].position.x;
+    public bool IsMoveRight => transform.position.x > _points[_currentPoint].position.x;
 
     private void Start()
     {

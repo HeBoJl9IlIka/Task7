@@ -17,13 +17,6 @@ public class AnimationsEnemy : MonoBehaviour
 
     private void Update()
     {
-        if(_enemyPatrolling.IsMoveRight)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else
-        {
-            _spriteRenderer.flipX = true;
-        }
+        _spriteRenderer.flipX = _enemyPatrolling.IsMoveRight;
     }
 }
