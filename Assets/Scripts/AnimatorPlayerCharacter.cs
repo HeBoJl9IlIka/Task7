@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(CharacterControl))]
-public class AnimatorCharacter : MonoBehaviour
+[RequireComponent(typeof(PlayerCharacterControl))]
+public class AnimatorPlayerCharacter : MonoBehaviour
 {
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
-    private CharacterControl _controlCharacter;
+    private PlayerCharacterControl _playerCharacterControl;
     private const string _speed = "Speed";
     private const string _flight = "Flight";
 
@@ -20,7 +20,7 @@ public class AnimatorCharacter : MonoBehaviour
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _controlCharacter = GetComponent<CharacterControl>();
+        _playerCharacterControl = GetComponent<PlayerCharacterControl>();
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class AnimatorCharacter : MonoBehaviour
            _animator.SetFloat(_speed, _rigidbody2D.velocity.x * -1);
         }
 
-        if (_controlCharacter.IsOnGround)
+        if (_playerCharacterControl.IsOnGround)
         {
             _animator.SetFloat(_flight, 0);
         }

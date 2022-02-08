@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UserInterface : MonoBehaviour
+public class PlayerInterface : MonoBehaviour
 {
     [SerializeField] private Text _money;
     [SerializeField] private PlayerWallet _playerWallet;

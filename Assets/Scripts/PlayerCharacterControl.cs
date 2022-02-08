@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class CharacterControl: MonoBehaviour
+public class PlayerCharacterControl : MonoBehaviour
 {
     [SerializeField] float _speed;
     [SerializeField] float _jumpForce;
@@ -35,7 +35,7 @@ public class CharacterControl: MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<Ground>())
+        if (collision.collider.TryGetComponent<Ground>(out Ground ground))
         {
             _isOnGround = true;
         }

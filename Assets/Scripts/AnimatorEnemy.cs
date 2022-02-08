@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(EnemyPatrolling))]
 [RequireComponent(typeof(SpriteRenderer))]
-public class AnimationsEnemy : MonoBehaviour
+public class AnimatorEnemy : MonoBehaviour
 {
     private EnemyPatrolling _enemyPatrolling;
     private SpriteRenderer _spriteRenderer;

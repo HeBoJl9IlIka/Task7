@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TakeCoin : MonoBehaviour
+public class RaisingCoin : MonoBehaviour
 {
     [SerializeField] private UnityEvent _took;
 
