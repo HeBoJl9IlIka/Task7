@@ -80870,7 +80870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69bb1c5e1f6cce469fa72521a9c479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 686912221}
+  _money: {fileID: 686912221}
   _playerWallet: {fileID: 2133246787}
 --- !u!20 &519420031
 Camera:
@@ -81609,7 +81609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85762e3f2e48e7b499e80f634932c322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabCoin: {fileID: 8473047206837857582, guid: 748e905b52ec841419b4dca1488ad4b2, type: 3}
+  _template: {fileID: 7048517093165173860, guid: 748e905b52ec841419b4dca1488ad4b2, type: 3}
 --- !u!4 &1514417793
 Transform:
   m_ObjectHideFlags: 0
@@ -83268,6 +83268,7 @@ GameObject:
   - component: {fileID: 2133246786}
   - component: {fileID: 2133246784}
   - component: {fileID: 2133246787}
+  - component: {fileID: 2133246788}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83448,6 +83449,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc998db584ae43f4ebcce489218994f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2133246788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133246778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3d229284adba54490d41db161654c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _took:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2133246787}
+        m_TargetAssemblyTypeName: PlayerWallet, Assembly-CSharp
+        m_MethodName: AddMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420030}
+        m_TargetAssemblyTypeName: UserInterface, Assembly-CSharp
+        m_MethodName: ShowInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &652340679983447095
 PrefabInstance:
   m_ObjectHideFlags: 0

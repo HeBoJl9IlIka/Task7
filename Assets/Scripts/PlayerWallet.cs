@@ -7,12 +7,8 @@ public class PlayerWallet : MonoBehaviour
 {
     public int Money { get; private set; }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void AddMoney()
     {
-        if (collision.TryGetComponent<Coin>(out Coin Coin))
-        {
-            Money++;
-            Destroy(Coin.gameObject);
-        }
+        ++Money;
     }
 }

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
-    [SerializeField] private Text _text;
+    [SerializeField] private Text _money;
     [SerializeField] private PlayerWallet _playerWallet;
 
-    private void Update()
+    public void ShowInfo()
     {
-        _text.text = "Монет: " + _playerWallet.Money;
+        _money.text = "Монет: " + _playerWallet.Money;
     }
 }
