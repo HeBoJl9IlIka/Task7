@@ -81591,7 +81591,7 @@ GameObject:
   - component: {fileID: 1514417793}
   - component: {fileID: 1514417792}
   m_Layer: 0
-  m_Name: CoinsSpawnPoints
+  m_Name: CoinSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83461,7 +83461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3d229284adba54490d41db161654c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _took:
+  _taken:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2133246787}
@@ -83477,7 +83477,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 519420030}
-        m_TargetAssemblyTypeName: UserInterface, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayerInterface, Assembly-CSharp
         m_MethodName: ShowInfo
         m_Mode: 1
         m_Arguments:
